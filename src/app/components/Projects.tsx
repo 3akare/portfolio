@@ -46,7 +46,7 @@ export default function Projects() {
         <section className="container mx-auto max-w-[90rem] py-[80px] px-[40px] md:px-[64px] lg:py-[128px] lg:px-[80px]">
             <h2 className="text-xl font-semibold mb-8">Projects</h2>
             <div
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6"
                 style={{
                     gridTemplateRows: "repeat(auto-fit, minmax(0, 1fr))",
                 }}
