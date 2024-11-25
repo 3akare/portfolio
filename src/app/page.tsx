@@ -1,11 +1,11 @@
 import HeroSection from "@/app/components/HeroSection";
-import FeaturedWork from "@/app/components/FeaturedWork";
+import Projects from "@/app/components/Projects";
 
 export default function Home() {
   return (
     <>
       <HeroSection/>
-        <FeaturedWork/>
+        <Projects/>
     </>
   );
 }
