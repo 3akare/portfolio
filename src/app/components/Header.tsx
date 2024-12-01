@@ -7,17 +7,17 @@ export default function Header() {
                 <Link href={"/"} className={"capitalize font-semibold text-lg md:text-xl"}>3AKARE</Link>
                 <ul className={"flex-row gap-1 font-medium text-lg hidden md:flex"}>
                     <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                        <Link href={"#"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                        <Link href={"./#work"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                             Work
                         </Link>
                     </li>
                     <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                        <Link href={"#"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                        <Link href={"./#about"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                             About
                         </Link>
                     </li>
                     <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                        <Link href={"#"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                        <Link href={"./#contact"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                             Contact
                         </Link>
                     </li>
