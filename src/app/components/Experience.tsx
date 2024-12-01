@@ -24,9 +24,9 @@ export default function Experience(){
                             <div key={index} className={"pb-12 border-b-[0.5px] border-0 border-gray-700 flex flex-col gap-4"}>
                                 <div>
                                     <h3 className={"font-semibold py-[0.5px]"}>{company}</h3>
-                                    <h4 className={"font-semibold py-[0.5px] text-[#b8b8b8]"}>{jobTitle}</h4>
+                                    <h4 className={"font-semibold py-[0.5px] text-[#525252] dark:text-[#b8b8b8]"}>{jobTitle}</h4>
                                 </div>
-                                <p className={"text-[#999999]"}>{duration}</p>
+                                <p className={"text-[#757575] dark:text-[#999999]"}>{duration}</p>
                             </div>
                         )
                     })}
