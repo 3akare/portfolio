@@ -11,7 +11,7 @@ export default function Banner() {
                     </h2>
                     <Link
                         href="mailto:bakaredavid007@gmail.com"
-                        className="text-2xl lg:text-3xl text-center"
+                        className="text-2xl lg:text-3xl text-center font-semibold hover:text-[#999999] transition-colors duration-300"
                     >
                         → bakaredavid007@gmail.com
                     </Link>
@@ -26,7 +26,7 @@ export default function Banner() {
                     </h2>
                     <Link
                         href="mailto:bakaredavid007@gmail.com"
-                        className="text-lg sm:text-xl mf:text-2xl text-center font-medium"
+                        className="text-lg sm:text-xl mf:text-2xl text-center font-semibold hover:text-[#999999] transition-colors duration-300"
                     >
                         → bakaredavid007@gmail.com
                     </Link>
