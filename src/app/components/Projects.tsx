@@ -7,37 +7,37 @@ const projectsObj = [
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/1"
     },
     {
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/2"
     },
     {
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/3"
     },
     {
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/4"
     },
     {
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/5"
     },
     {
         image: image,
         title: "Relation",
         description: "Visual Identity",
-        link: "/relation"
+        link: "/projects/6"
     },
 ]
 
