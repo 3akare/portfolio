@@ -6,3 +6,18 @@ html, body{
     font-size: 16px;
     @apply bg-white text-black dark:bg-black dark:text-white box-border scroll-smooth;
 }
+
+body {
+    opacity: 0;
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
