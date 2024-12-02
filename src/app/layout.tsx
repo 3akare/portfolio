@@ -6,22 +6,22 @@ import Footer from "@/app/components/Footer";
 
 const inter = Inter({subsets: ['latin']})
 export const metadata: Metadata = {
-  title: "3akare",
-  description: "David Bakare — I’m driven to build awesome things",
+    title: "3akare",
+    description: "David Bakare — I’m driven to build awesome things",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} antialiased`}>
-                <Header/>
-                {children}
-                <Footer/>
-            </body>
+        <body className={`${inter.className} antialiased`}>
+        <Header/>
+        {children}
+        <Footer/>
+        </body>
         </html>
     );
 }

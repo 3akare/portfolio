@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Footer(){
-    return(
+    return (
         <footer
             className={"container mx-auto max-w-[90rem] py-[80px] px-[40px] md:px-[64px] lg:py-[128px] lg:px-[80px] flex flex-col gap-12 md:gap-0  md:flex-row justify-between items-center capitalize"}>
             <ul className={"flex flex-row gap-4 font-medium text-lg "}>
