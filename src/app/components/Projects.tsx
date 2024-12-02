@@ -7,6 +7,12 @@ const projectsObj = [
         image: image,
         title: "Relation",
         description: "Visual Identity",
+        link: "/projects/0"
+    },
+    {
+        image: image,
+        title: "Relation",
+        description: "Visual Identity",
         link: "/projects/1"
     },
     {
@@ -32,13 +38,7 @@ const projectsObj = [
         title: "Relation",
         description: "Visual Identity",
         link: "/projects/5"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/6"
-    },
+    }
 ]
 
 export default function Projects() {

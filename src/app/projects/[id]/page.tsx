@@ -10,13 +10,12 @@ export function generateStaticParams() {
     }));
 }
 
-export default async function Projects({ params }:{params: any}){
-    const id = (await params).id;
-    const project = projects.find((p) => p.id === parseInt(id));
+export default async function Projects({ params }:{params: Promise<{ id: string }>}){
+    const id = parseInt((await params).id);
+    const project = projects.find((p) => p.id === id);
     if (!project) {
         redirect('/');
     }
-
     return (
         <>
             <section
