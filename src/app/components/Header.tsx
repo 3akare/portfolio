@@ -19,8 +19,8 @@ export default function Header() {
 
     return (
         <>
-            <header className={"w-full flex justify-center"}>
-                <nav className={"fixed bg-white dark:bg-black w-full h-[4.75rem] z-20 container mx-auto max-w-[90rem] flex flex-row justify-between items-center px-[40px] md:px-[64px] lg:px-[80px]"}>
+            <header className={"w-full fixed top-0 flex justify-center z-20 "}>
+                <nav className={"bg-white dark:bg-black w-full h-[4.75rem] container mx-auto max-w-[90rem] flex flex-row justify-between items-center px-[40px] md:px-[64px] lg:px-[80px]"}>
                     <Link href={"/"} className={"capitalize font-semibold text-lg md:text-xl"}>
                         3AKARE
                     </Link>
