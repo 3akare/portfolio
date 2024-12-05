@@ -50,10 +50,10 @@ export default function Header() {
             </header>
 
             <section
-                className={`fixed z-10 bg-white dark:bg-black container mt-[4.75rem] mx-auto max-w-[90rem] flex md:hidden py-[80px] px-[40px] w-full h-full transition-transform duration-700 ${
+                className={`fixed z-10 bg-white dark:bg-black container mx-auto max-w-[90rem] flex md:hidden py-[80px] px-[40px] w-full h-full transition-transform duration-700 ${
                     showMenu ? "translate-y-0" : "-translate-y-full"
                 }`}>
-                <ul className={"flex flex-col text-4xl gap-10 font-semibold"}>
+                <ul className={"flex flex-col text-4xl gap-10 font-semibold justify-center"}>
                     <li onClick={() => handleLinkClick("/#work")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Work</li>
                     <li onClick={() => handleLinkClick("/#about")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>About</li>
                     <li onClick={() => handleLinkClick("/#contact")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Contact</li>
