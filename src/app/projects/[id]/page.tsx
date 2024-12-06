@@ -3,6 +3,16 @@ import image from "@/../public/image.jpg"
 import { projects } from "../../../../public/data/projects";
 import {redirect} from "next/navigation";
 import Banner from "@/app/components/Banner";
+import Link from "next/link";
+
+const urlIsValid = (url: string) => {
+    try{
+        new URL(url);
+        return true
+    }catch (error){
+        return false
+    }
+}
 
 export function generateStaticParams() {
     return projects.map((project) => ({
@@ -13,6 +23,7 @@ export function generateStaticParams() {
 export default async function Projects({ params }:{params: Promise<{ id: string }>}){
     const id = parseInt((await params).id);
     const project = projects.find((p) => p.id === id);
+
     if (!project) {
         redirect('/');
     }
@@ -23,32 +34,67 @@ export default async function Projects({ params }:{params: Promise<{ id: string 
                 <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
                     <h2 className="text-[42px] md:text-[74px] lg:text-[80px] font-semibold mb-8">{projects[id].name}</h2>
                     <div className={"flex flex-col gap-12 text-lg md:text-xl"}>
-                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>My approach to design is
-                            grounded in research and collaboration. I believe that the best results come from
-                            understanding
-                            the end-user and working closely with the team. With clear communication and an open mind, I
-                            make sure each project meets its goals and exceeds expectations.</p>
-                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>My approach to design is
-                            grounded in research and collaboration. I believe that the best results come from
-                            understanding
-                            the end-user and working closely with the team. With clear communication and an open mind, I
-                            make sure each project meets its goals and exceeds expectations.</p>
+                        {projects[id].data.paragraphs && projects[id].data.paragraphs.map((paragraph: string, i) => {
+                            return (
+                                <p key={i} className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>
+                                    {paragraph}
+                                </p>
+                            )
+                        })}
                     </div>
                 </div>
                 <Image alt={""} src={image} className={"rounded-2xl"}></Image>
                 <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
-                    <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">About me</h2>
+                    <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">Description</h2>
                     <div className={"flex flex-col gap-12 text-lg md:text-xl"}>
-                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>My approach to design is
-                            grounded in research and collaboration. I believe that the best results come from
-                            understanding
-                            the end-user and working closely with the team. With clear communication and an open mind, I
-                            make sure each project meets its goals and exceeds expectations.</p>
-                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>My approach to design is
-                            grounded in research and collaboration. I believe that the best results come from
-                            understanding
-                            the end-user and working closely with the team. With clear communication and an open mind, I
-                            make sure each project meets its goals and exceeds expectations.</p>
+                        {projects[id].data.additional && projects[id].data.additional.map((paragraph: string, i) => {
+                            return (
+                                <p key={i} className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>
+                                    {paragraph}
+                                </p>
+                            )
+                        })}
+                    </div>
+                </div>
+                <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
+                    <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">Tools and
+                        Technology</h2>
+                    <div className={"flex flex-row gap-1 flex-wrap text-lg md:text-xl"}>
+                        {projects[id].data.tools && projects[id].data.tools.map((tool: string, i) => {
+                            return (
+                                <span key={i} className={"text-lg inline md:text-xl text-[#333333] dark:text-[#cccccc]"}>
+                                    {tool}
+                                    {projects[id].data.tools ?
+                                        i !== projects[id].data.tools.length - 1 ? "," : ""
+                                        : ""}
+                                </span>
+                            )
+                        })}
+                    </div>
+                </div>
+                <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
+                    <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">Links</h2>
+                    <div className={"flex flex-col gap-12 text-lg md:text-xl"}>
+                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>
+                            <span className={"font-bold"}>Live link:</span>{" "}
+                            {
+                                urlIsValid(projects[id].data.liveUrl as string)?
+                                    <Link href={projects[id].data.liveUrl as string}>
+                                        {projects[id].data.liveUrl as string}
+                                    </Link>:
+                                    projects[id].data.liveUrl
+                            }
+                        </p>
+                        <p className={"text-lg md:text-xl text-[#333333] dark:text-[#cccccc]"}>
+                            <span className={"font-bold"}>Source Code:</span>{" "}
+                            {
+                                urlIsValid(projects[id].data.sourceUrl as string)?
+                                    <Link href={projects[id].data.sourceUrl as string}>
+                                        {projects[id].data.sourceUrl as string}
+                                    </Link>:
+                                    projects[id].data.sourceUrl
+                            }
+                        </p>
                     </div>
                 </div>
             </section>

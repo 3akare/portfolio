@@ -24,7 +24,7 @@ export default function Header() {
                     <p onClick={() => {
                         if (showMenu) handleLinkClick("/")
                         else router.push("/")
-                    }} className={"capitalize font-semibold text-lg md:text-xl"}>
+                    }} className={"capitalize font-semibold text-lg md:text-xl hover:cursor-pointer"}>
                         3AKARE
                     </p>
                     <ul className={"flex-row gap-1 font-medium text-lg hidden md:flex"}>
