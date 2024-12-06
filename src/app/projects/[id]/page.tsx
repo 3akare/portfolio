@@ -1,6 +1,6 @@
 import Image from "next/image";
 import image from "@/../public/image.jpg"
-import { projects } from "@/app/projects/[id]/data/projects";
+import { projects } from "../../../../public/data/projects";
 import {redirect} from "next/navigation";
 import Banner from "@/app/components/Banner";
 

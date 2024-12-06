@@ -1,45 +1,7 @@
-import image from "@/../public/image.jpg"
+import {projects} from "../../../public/data/projects";
 import Image from "next/image";
 import Link from "next/link"
 
-const projectsObj = [
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/0"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/1"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/2"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/3"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/4"
-    },
-    {
-        image: image,
-        title: "Relation",
-        description: "Visual Identity",
-        link: "/projects/5"
-    }
-]
 
 export default function Projects() {
     return (
@@ -52,7 +14,7 @@ export default function Projects() {
                     gridTemplateRows: "repeat(auto-fit, minmax(0, 1fr))",
                 }}
             >
-                {projectsObj.map(({image, description, title, link}, index) => {
+                {projects.map(({data:{image, description, title, link}}, index) => {
                     let cardStyle;
                     if (index === 1 || index === 3) {
                         cardStyle = {gridRow: "span 2"}
