@@ -6,7 +6,7 @@ export const projects = [
         name: "ASL Recognition System",
         data: {
             image: image,
-            title: "American Sign Language Recognition",
+            title: "ASL Recognition",
             description: "Converts American Sign Language gestures into audio.",
             link: "/projects/0",
             tools: [
