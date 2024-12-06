@@ -10,6 +10,7 @@ const urlIsValid = (url: string) => {
         new URL(url);
         return true
     }catch (error){
+        console.log(error)
         return false
     }
 }
