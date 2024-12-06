@@ -21,9 +21,12 @@ export default function Header() {
         <>
             <header className={"w-full fixed top-0 flex justify-center z-20 "}>
                 <nav className={"bg-white dark:bg-black w-full h-[4.75rem] container mx-auto max-w-[90rem] flex flex-row justify-between items-center px-[40px] md:px-[64px] lg:px-[80px]"}>
-                    <Link href={"/"} className={"capitalize font-semibold text-lg md:text-xl"}>
+                    <p onClick={() => {
+                        if (showMenu) handleLinkClick("/")
+                        else router.push("/")
+                    }} className={"capitalize font-semibold text-lg md:text-xl"}>
                         3AKARE
-                    </Link>
+                    </p>
                     <ul className={"flex-row gap-1 font-medium text-lg hidden md:flex"}>
                         <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
                             <Link href={"/#work"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
