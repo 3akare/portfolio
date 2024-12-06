@@ -24,7 +24,7 @@ export default function Projects() {
                              className="rounded-t-2xl relative bg-transparent hover:-translate-y-1 transition-transform duration-[500ms]"
                              style={cardStyle}>
                             <Link href={link}>
-                                <Image src={image} alt={description} className="w-full h-full object-cover rounded-2xl"
+                                <Image src={image} alt={description} className="w-full min-h-[165px] md:min-h-[400px] h-full object-cover rounded-2xl"
                                        priority/>
                                 <div
                                     className="p-4 relative w-full -top-[6rem] dark:bg-[rgb(26,26,26)] bg-[#f7f7f7] rounded-b-2xl">
