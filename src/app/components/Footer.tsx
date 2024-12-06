@@ -26,19 +26,19 @@ export default function Footer(){
             </ul>
             <ul className={"flex flex-row gap-1 font-medium text-lg"}>
                 <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                    <Link href={"#"}
+                    <Link href={"https://x.com/3akare"} target={"_blank"}
                           className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                         Twitter
                     </Link>
                 </li>
-                <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                    <Link href={"#"}
+                <li className={"dark:text-[#B8B8B8] text-[#525252]"} >
+                    <Link href={"https://github.com/3akare"} target={"_blank"}
                           className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                         Github
                     </Link>
                 </li>
                 <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                    <Link href={"#"}
+                    <Link href={"https://linkedin.com/in/david-bakare"} target={"_blank"}
                           className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                         LinkedIn
                     </Link>
