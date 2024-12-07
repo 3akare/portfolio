@@ -32,7 +32,7 @@ export default async function Projects({ params }:{params: Promise<{ id: string 
             <section
                 className="container flex flex-col gap-12 md:gap-16 mt-[4.75rem] mx-auto max-w-[90rem] py-[80px] px-[40px] md:px-[64px] lg:py-[128px] lg:px-[80px]">
                 <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
-                    <h2 className="text-[42px] md:text-[74px] lg:text-[80px] font-semibold mb-8">{projects[id].name}</h2>
+                    <h2 className="text-[42px] md:text-[54px] lg:text-[74px] font-semibold mb-8">{projects[id].name}</h2>
                     <div className={"flex flex-col gap-12 text-lg md:text-xl"}>
                         {projects[id].data.paragraphs && projects[id].data.paragraphs.map((paragraph: string, i) => {
                             return (
