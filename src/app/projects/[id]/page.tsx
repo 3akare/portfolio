@@ -79,7 +79,7 @@ export default async function Projects({ params }:{params: Promise<{ id: string 
                             <span className={"font-bold"}>Live link:</span>{" "}
                             {
                                 urlIsValid(projects[id].data.liveUrl as string)?
-                                    <Link href={projects[id].data.liveUrl as string}>
+                                    <Link href={projects[id].data.liveUrl as string} target={"_blank"}>
                                         {projects[id].data.liveUrl as string}
                                     </Link>:
                                     projects[id].data.liveUrl
@@ -89,7 +89,7 @@ export default async function Projects({ params }:{params: Promise<{ id: string 
                             <span className={"font-bold"}>Source Code:</span>{" "}
                             {
                                 urlIsValid(projects[id].data.sourceUrl as string)?
-                                    <Link href={projects[id].data.sourceUrl as string}>
+                                    <Link href={projects[id].data.sourceUrl as string} target={"_blank"}>
                                         {projects[id].data.sourceUrl as string}
                                     </Link>:
                                     projects[id].data.sourceUrl

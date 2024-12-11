@@ -1,11 +1,12 @@
 import image from "../image.jpg";
+import asl_image from "../asl.webp"
 
 export const projects = [
     {
         id: 0,
         name: "ASL Recognition System",
         data: {
-            image: image,
+            image: asl_image,
             title: "ASL Recognition",
             description: "Converts American Sign Language gestures into audio.",
             link: "/projects/0",
@@ -18,14 +19,13 @@ export const projects = [
                 "Web Speech API"
             ],
             liveUrl: "Not Available",
-            sourceUrl: "https://github.com/3akare/Hand-Gesture-Detection",
+            sourceUrl: "https://github.com/3akare/ASL-Recognition-System",
             paragraphs: [
                 "This application leverages Mediapipe for gesture detection and gRPC for efficient communication between the client and server. The process begins with a pre-trained AI model. During runtime, Mediapipe captures hand gestures and sends the corresponding data to the backend server through a gRPC connection. The server processes this data and sends a response, which is rendered on the frontend built with Flask. This design ensures smooth and fast gesture recognition, making it a valuable tool for accessibility and communication.",
-                "The project serves as my final year project and is centered on creating an accessible solution for bridging communication gaps. By combining AI tools and efficient server communication, it highlights the potential of technology to make a real difference in people's lives."
             ],
             additional: [
+                "The project serves as my final year project and is centered on creating an accessible solution for bridging communication gaps. By combining AI tools and efficient server communication, it highlights the potential of technology to make a real difference in people's lives.",
                 "The project simplifies complex gesture recognition processes by modularizing the architecture into distinct components: the frontend, which captures gestures and displays results, and the backend, which processes data and sends responses. The modular design facilitates maintainability and scalability.",
-                "The main motivation for this project is my belief in its potential to provide a practical and impactful solution for communication accessibility. I chose Python for its extensive AI-related frameworks, which streamlined development. Despite my familiarity with Java, I opted for Python to avoid searching for alternatives to essential tools.",
                 "I selected gRPC for its speed and efficiency compared to WebSockets or REST APIs, and to challenge myself with a new technology. The architecture separates concerns effectively, with the Flask application collecting gesture data as an array, sending it to the server for processing, and rendering the results on the HTML UI. The project is still in progress, with plans for further iterations to enhance its functionality."
             ]
         }
@@ -190,7 +190,7 @@ export const projects = [
         data: {
             image: image,
             title: "Tiny BASIC Compiler",
-            description: "A lightweight compiler for a simplified BASIC programming language.",
+            description: "A compiler for a simplified BASIC programming language.",
             link: "/projects/7",
             tools: [
                 "Java",
