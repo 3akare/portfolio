@@ -1,5 +1,6 @@
 import image from "../image.jpg";
 import asl_image from "../asl.webp"
+import nobr_image from "../nobr.webp"
 
 export const projects = [
     {
@@ -32,10 +33,10 @@ export const projects = [
     },
     {
         id: 1,
-        name: "nobr Anonymous Chat",
+        name: "nobr",
         data: {
-            image: image,
-            title: "nobr Anonymous Chat",
+            image: nobr_image,
+            title: "nobr",
             description: "An anonymous chat platform.",
             link: "/projects/1",
             tools: [
@@ -46,10 +47,10 @@ export const projects = [
             liveUrl: "https://nobr-delta.vercel.app",
             sourceUrl: "https://github.com/3akare/nobr",
             paragraphs: [
-                "nobr is an anonymous chat application built with Next.js and Firebase, designed to provide users with a platform for secure and private communication. Inspired by the principles of Omegle, the application allows individuals to interact without fear of revealing their identities. Next.js was chosen for its exceptional caching and routing capabilities, ensuring seamless navigation and optimal performance, while Firebase powers the backend to handle real-time communication efficiently.",
-                "The motivation behind nobr was to explore the concept of building a startup centered around anonymity and privacy in communication. The project also provided an opportunity to apply UI/UX and human-computer interaction principles. Features were designed to minimize cognitive load, incorporate intuitive metaphors, and enhance the overall user experience, ensuring the application was simple and self-explanatory to use."
+                "nobr is an anonymous chat application built with Next.js and Firebase, designed to provide users with a platform for secure and private communication. Inspired by Omegle, the application allows individuals to interact without fear of revealing their identities. Next.js was chosen for its exceptional caching and routing capabilities, ensuring seamless navigation and optimal performance, while Firebase powers the backend to handle real-time communication efficiently.",
             ],
             additional: [
+                "The motivation behind nobr was to explore the concept of building a startup. The project also provided an opportunity to apply UI/UX and human-computer interaction principles. Features were designed to minimize cognitive load, incorporate intuitive metaphors, and enhance the overall user experience, ensuring the application was simple and self-explanatory to use.",
                 "While the application is live and functions as intended, challenges arose in progressing the startup due to team constraints. Collaborators, who are also college undergraduates, faced difficulty balancing their schedules, impacting the project’s momentum.",
                 "Despite these challenges, the project successfully implemented advanced UI/UX principles, prioritizing user ease and interaction quality. nobr remains a testament to the potential of combining innovative ideas with modern technology like Next.js and Firebase."
             ]
