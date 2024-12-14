@@ -1,6 +1,7 @@
 import image from "../image.jpg";
 import asl_image from "../asl.webp"
 import nobr_image from "../nobr.webp"
+import webhook from "../webhook-notification.webp"
 
 export const projects = [
     {
@@ -60,23 +61,25 @@ export const projects = [
         id: 2,
         name: "Notification Service",
         data: {
-            image: image,
+            image: webhook,
             title: "Remita Notification Service",
             description: "A webhook-based notification service.",
             link: "/projects/2",
             tools: [
                 "Spring Boot",
                 "Kafka",
-                "Docker"
+                "Zookeeper",
+                "Docker",
+                "JMeter",
             ],
             liveUrl: "Not Available",
             sourceUrl: "Not Available",
             paragraphs: [
-                "The Remita Notification Service is a webhook-based system designed to handle high-throughput notifications within Remita's payment ecosystem. This project was undertaken during my internship at Remita, where I was tasked with completing and enhancing the application after the original engineer left. With limited support, I took ownership of the system, refactored existing components, and built critical features to ensure its reliability and scalability.",
-                "The system features a robust retry mechanism: when a notification fails to reach a recipient URL, it is retried up to three times. If all attempts fail, the URL is marked as 'failed.' URLs that repeatedly fail (appearing three times in the failure database collection) are automatically blacklisted, preventing further notifications from being sent. Additionally, I integrated Remita's email service to notify users of impending blacklisting or provide alerts once their URLs were blacklisted."
+                "The Remita Notification Service is a webhook-based system designed to handle high-throughput notifications within Remita's payment ecosystem. This project was undertaken during my internship at Remita, where I was tasked with completing and enhancing the application after the original engineer left. With limited support, I took ownership of the system, refactored existing components, and built critical features to ensure its reliability and scalability."
             ],
             additional: [
-                "The application was engineered to process over 20,000 notifications per second seamlessly. Leveraging Spring Boot and Kafka, I implemented idempotency to prevent duplicate processing of notifications, addressing challenges related to Kafka offsets. The system was also containerized with Docker for ease of deployment and scalability.",
+                "The system features a robust retry mechanism: when a notification fails to reach a recipient URL, it is retried up to three times. If all attempts fail, the URL is marked as 'failed.' URLs that repeatedly fail (appearing three times in the failure database collection) are automatically blacklisted, preventing further notifications from being sent. Additionally, I integrated Remita's email service to notify users of impending blacklisting or provide alerts once their URLs were blacklisted.",
+                "This application, part of a larger microservices architecture, was engineered to process over 20,000 notifications per second seamlessly. Leveraging Spring Boot and Kafka, I implemented idempotency to prevent duplicate processing of notifications, addressing challenges related to Kafka offsets. The system was also containerized with Docker for ease of deployment and scalability.",
                 "This project highlights my ability to design and optimize scalable backend systems, ensuring reliability under high-load conditions. It was a valuable opportunity to work independently, applying my technical expertise to deliver a mission-critical solution for a leading fintech company."
             ]
         }

@@ -28,7 +28,8 @@ export default function Projects() {
                                 <div
                                     className="p-4 relative w-full -top-[6rem] dark:bg-[rgb(26,26,26)] bg-[#f7f7f7] rounded-b-2xl">
                                     <h3 className="text-lg font-semibold">{title}</h3>
-                                    <p className="text-base h-10 font-medium text-[#757575] dark:text-[#999999]">{description}</p>
+                                    <p className="text-base
+                                    h-10 font-medium text-[#757575] dark:text-[#999999]">{description}</p>
                                 </div>
                             </Link>
                         </div>
