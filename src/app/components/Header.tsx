@@ -37,6 +37,10 @@ export default function Header() {
                             <Link href={"/#about"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                                 About
                             </Link>
+                        </li><li className={"dark:text-[#B8B8B8] text-[#525252]"}>
+                            <Link href={"/#tools"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                                Tools
+                            </Link>
                         </li>
                         <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
                             <Link href={"/#contact"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
@@ -59,6 +63,7 @@ export default function Header() {
                 <ul className={"flex flex-col text-4xl gap-10 font-semibold justify-center"}>
                     <li onClick={() => handleLinkClick("/#work")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Work</li>
                     <li onClick={() => handleLinkClick("/#about")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>About</li>
+                    <li onClick={() => handleLinkClick("/#tools")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Tools</li>
                     <li onClick={() => handleLinkClick("/#contact")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Contact</li>
                 </ul>
             </section>
