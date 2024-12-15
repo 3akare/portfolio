@@ -2,6 +2,7 @@ import image from "../image.jpg";
 import asl_image from "../asl.webp"
 import nobr_image from "../nobr.webp"
 import webhook from "../webhook-notification.webp"
+import allcast_image from "../allcast.webp"
 
 export const projects = [
     {
@@ -88,7 +89,7 @@ export const projects = [
         id: 3,
         name: "Allcast NG Website",
         data: {
-            image: image,
+            image: allcast_image,
             title: "Allcast NG Website",
             description: "The official website for Allcast NG.",
             link: "/projects/3",
@@ -101,9 +102,9 @@ export const projects = [
             sourceUrl: "Not Available",
             paragraphs: [
                 "The Allcast NG Official Website was developed during my tenure as part of the development team at Allcast NG. I was responsible for leading the team and building the company's official website to reflect its core mission of offering software development services and web hosting. The website was designed and implemented based on a detailed requirements document, ensuring it met the company's vision and effectively communicated its offerings to potential clients.",
-                "The primary objective of the website was to create transparency and build trust by showcasing Allcast NG as a credible software company. The site serves as a gateway for users to learn about the company's services, platforms, and expertise in web hosting and software development."
             ],
             additional: [
+                "The primary objective of the website was to create transparency and build trust by showcasing Allcast NG as a credible software company. The site serves as a gateway for users to learn about the company's services, platforms, and expertise in web hosting and software development.",
                 "The website is live and functional, representing a significant milestone in making Allcast NG more accessible and visible to its audience. As the lead developer, I ensured the design and development aligned with modern web standards and usability principles.",
                 "This project highlights my ability to lead a development team, translate requirements into functional applications, and deliver results that align with a company’s goals."
             ]

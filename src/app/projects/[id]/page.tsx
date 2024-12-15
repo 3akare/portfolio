@@ -43,7 +43,7 @@ export default async function Projects({ params }:{params: Promise<{ id: string 
                         })}
                     </div>
                 </div>
-                <Image alt={""} src={projects[id].data.image} className={"rounded-2xl max-h-[800px] object-cover"}></Image>
+                <Image alt={""} src={projects[id].data.image} className={"rounded-2xl max-h-[800px] object-cover object-top"}></Image>
                 <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
                     <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">Additional</h2>
                     <div className={"flex flex-col gap-12 text-lg md:text-xl"}>
