@@ -29,15 +29,21 @@ export default function Header() {
                     </button>
                     <ul className={"flex-row gap-1 font-medium text-lg hidden md:flex"}>
                         <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                            <Link href={"/#work"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
-                                Work
+                            <Link href={"/#projects"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                                Projects
                             </Link>
                         </li>
                         <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
                             <Link href={"/#about"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                                 About
                             </Link>
-                        </li><li className={"dark:text-[#B8B8B8] text-[#525252]"}>
+                        </li>
+                        <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
+                            <Link href={"/#experience"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
+                                Experience
+                            </Link>
+                        </li>
+                        <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
                             <Link href={"/#tools"} className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
                                 Tools
                             </Link>
@@ -61,10 +67,11 @@ export default function Header() {
                     showMenu ? "translate-y-0" : "-translate-y-full"
                 }`}>
                 <ul className={"flex flex-col text-4xl gap-10 font-semibold justify-center"}>
-                    <li onClick={() => handleLinkClick("/#work")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Work</li>
-                    <li onClick={() => handleLinkClick("/#about")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>About</li>
-                    <li onClick={() => handleLinkClick("/#tools")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Tools</li>
-                    <li onClick={() => handleLinkClick("/#contact")} className={`transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Contact</li>
+                    <li onClick={() => handleLinkClick("/#projects")} className={`hover:cursor-pointer transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Projects</li>
+                    <li onClick={() => handleLinkClick("/#about")} className={`hover:cursor-pointer transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>About</li>
+                    <li onClick={() => handleLinkClick("/#experience")} className={`hover:cursor-pointer transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Experience</li>
+                    <li onClick={() => handleLinkClick("/#tools")} className={`hover:cursor-pointer transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Tools</li>
+                    <li onClick={() => handleLinkClick("/#contact")} className={`hover:cursor-pointer transition-opacity duration-300 ${showMenu ? "opacity-100 delay-700" : "opacity-0"}`}>Contact</li>
                 </ul>
             </section>
         </>

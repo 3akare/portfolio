@@ -20,7 +20,7 @@ export default function Experience(){
         }
     ]
     return (
-        <section
+        <section id={"experience"}
             className="container mx-auto max-w-[90rem] py-[80px] px-[40px] md:px-[64px] lg:py-[128px] lg:px-[80px]">
             <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-6"}>
                 <h2 className="text-[24px] md:text-[30px] lg:text-[32px] font-semibold mb-8">Experience</h2>

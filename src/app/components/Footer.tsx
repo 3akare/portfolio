@@ -6,9 +6,9 @@ export default function Footer(){
             className={"container mx-auto max-w-[90rem] py-[80px] px-[40px] md:px-[64px] lg:py-[128px] lg:px-[80px] flex flex-col gap-12 md:gap-0  md:flex-row justify-between items-center capitalize"}>
             <ul className={"flex flex-row gap-4 font-medium text-lg "}>
                 <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
-                    <Link href={"./#work"}
+                    <Link href={"./#projects"}
                           className={"dark:hover:bg-[#212121] hover:bg-[#f7f7f7] py-[0.5rem] px-[1rem] transition-[background] duration-300 rounded-md"}>
-                        work
+                        Projects
                     </Link>
                 </li>
                 <li className={"dark:text-[#B8B8B8] text-[#525252]"}>
