@@ -12,6 +12,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "terminal-green": "rgb(var(--terminal-green))"
+      },
+      fontFamily: {
+        mono: ["var(--font-mono)", "monospace"],
       },
     },
   },
