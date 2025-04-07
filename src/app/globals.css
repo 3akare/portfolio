@@ -2,22 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    font-size: 16px;
-    @apply bg-white text-black dark:bg-black dark:text-white box-border scroll-smooth;
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+  --terminal-green: 83, 255, 83;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    opacity: 0;
-    animation: fadeIn 1000ms ease-in-out forwards;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Blinking cursor */
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 

@@ -1,27 +1,36 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google"
-import "./globals.css";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
+import type React from "react"
+import type { Metadata } from "next"
+import { JetBrains_Mono } from "next/font/google"
+import "./globals.css"
+import { ThemeProvider } from "@/app/components/theme-provider"
 
-const inter = Inter({subsets: ['latin']})
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
+
 export const metadata: Metadata = {
-    title: "3akare",
-    description: "David Bakare — I’m driven to build awesome things",
-};
+  title: "David | Software Engineer",
+  description: "Personal portfolio of David, a software engineer"
+}
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
+  children,
+}: Readonly<{
+  children: React.ReactNode
 }>) {
-    return (
-        <html lang="en">
-        <body className={`${inter.className} antialiased`}>
-        <Header/>
-        {children}
-        <Footer/>
-        </body>
-        </html>
-    );
+  return (
+    <html lang="en" className="dark" style={{colorScheme:"dark"}}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      </head>
+      <body className={`${jetbrainsMono.variable} font-mono`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
 }
+
+import './globals.css'
