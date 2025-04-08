@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Github, Twitter, Mail } from "lucide-react"
+import { Github, Twitter, ExternalLink, Mail } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/app/lib/utils"
 
@@ -97,7 +97,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="text-white/60 hover:text-terminal-green transition-colors"
                   >
-                    <Github size={16} />
+                    <ExternalLink size={16} />
                     <span className="sr-only">GitHub</span>
                   </Link>
                 </div>
