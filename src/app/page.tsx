@@ -31,7 +31,7 @@ export default function Home() {
       github: "https://github.com/3akare/nobr",
     },
   ];
-  
+
 
   return (
     <main className="flex flex-col h-screen bg-black text-white font-mono p-6 md:p-12">
@@ -69,11 +69,10 @@ export default function Home() {
       {/* Main content */}
       <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto">
         {/* Intro section */}
-        <section className="mb-12">
+        <section className="mb-12 w-full max-w-[648px]">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hi, I&apos;m 3akare.</h1>
           <h2 className="text-xl mb-4 text-terminal-green">Software Engineer</h2>
-	  <p className="text-white/70">I&apos;m also an Open Source Contributor.</p>
-	  <p className="text-white/70">Off the keyboard, I&apos;m a son, a brother, and a friend.</p>
+          <p className="text-white/70">I&apos;m also an Open Source Contributor. Off the keyboard, I&apos;m a son, a brother, and a friend.</p>
         </section>
 
         {/* Projects section */}
