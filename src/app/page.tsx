@@ -72,8 +72,8 @@ export default function Home() {
         <section className="mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hi, I&apos;m 3akare.</h1>
           <h2 className="text-xl mb-4 text-terminal-green">Software Engineer</h2>
-	  <p className="text-white/70">I'm also an Open Source Contributor.</p>
-	  <p className="text-white/70">Off the keyboard, I'm a son, a brother, and a friend.</p>
+	  <p className="text-white/70">I&apos;m also an Open Source Contributor.</p>
+	  <p className="text-white/70">Off the keyboard, I&apos;m a son, a brother, and a friend.</p>
         </section>
 
         {/* Projects section */}
