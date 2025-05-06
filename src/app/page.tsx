@@ -70,9 +70,10 @@ export default function Home() {
       <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto">
         {/* Intro section */}
         <section className="mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">I&apos;m 3akare.</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hi, I&apos;m 3akare.</h1>
           <h2 className="text-xl mb-4 text-terminal-green">Software Engineer</h2>
-          <p className="text-white/70">I build robust, efficient systems with an eye for detail and performance.</p>
+	  <p className="text-white/70">I'm also an Open Source Contributor.</p>
+	  <p className="text-white/70">Off the keyboard, I'm a son, a brother, and a friend.</p>
         </section>
 
         {/* Projects section */}
