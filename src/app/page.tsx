@@ -18,13 +18,20 @@ export default function Home() {
     },
     {
       id: 2,
+      title: "u0date",
+      description: "Terminal-Based Text Editor",
+      tags: ["C", "ncurses"],
+      github: "https://github.com/3akare/u0date",
+    },
+    {
+      id: 3,
       title: "monty",
       description: "Monty Bytecode Interpreter",
       tags: ["C", "Ubuntu 20.04"],
       github: "https://github.com/3akare/monty",
     },
     {
-      id: 3,
+      id: 4,
       title: "nobr",
       description: "Low-latency Messaging Platform",
       tags: ["Next.js", "Firebase"],
