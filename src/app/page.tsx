@@ -18,25 +18,25 @@ export default function Home() {
     },
     {
       id: 2,
+      title: "relay",
+      description: "Build automation and package manager for C/C++",
+      tags: ["Python"],
+      github: "https://github.com/3akare/relay",
+    },
+    {
+      id: 3,
       title: "u0date",
       description: "Terminal-Based Text Editor",
       tags: ["C", "ncurses"],
       github: "https://github.com/3akare/u0date",
     },
     {
-      id: 3,
+      id: 4,
       title: "monty",
       description: "Monty Bytecode Interpreter",
       tags: ["C", "Ubuntu 20.04"],
       github: "https://github.com/3akare/monty",
-    },
-    {
-      id: 4,
-      title: "nobr",
-      description: "Low-latency Messaging Platform",
-      tags: ["Next.js", "Firebase"],
-      github: "https://github.com/3akare/nobr",
-    },
+    }
   ];
 
 
