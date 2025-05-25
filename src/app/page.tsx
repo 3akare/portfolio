@@ -13,7 +13,7 @@ export default function Home() {
       id: 1,
       title: "snoopy",
       description: "Nigerian Sign Language to Speech Translation System",
-      tags: ["Next.js", "Python", "gRPC", "Bi-LSTM", "Gemini-2.0-flash"],
+      tags: ["Next.js", "Python", "gRPC", "Tensorflow", "Gemini-2.0-flash"],
       github: "https://github.com/3akare/snoopy",
     },
     {
