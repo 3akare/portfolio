@@ -79,7 +79,7 @@ export default function Home() {
         <section className="mb-12 w-full max-w-[648px]">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hi, I&apos;m 3akare.</h1>
           <h2 className="text-xl mb-4 text-terminal-green">Software Engineer</h2>
-          <p className="text-white/70">I&apos;m also an Open Source Contributor. Off the keyboard, I&apos;m a son, a brother, and a friend.</p>
+          <p className="text-white/70">I&apos;m also an Open Source Contributor. Off the keyboard, I&apos;m a son, and a brother.</p>
         </section>
 
         {/* Projects section */}
