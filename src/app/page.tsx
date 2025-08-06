@@ -39,7 +39,7 @@ export default function Home() {
       title: "relay",
       description:
         "A lightweight build automation tool and package manager for C/C++ projects.\n\nInspired by Build2 (https://build2.org), it handles compilation, dependency resolution, and workspace management using a simple Python-based DSL.",
-      tags: ["Python", "CMake"],
+      tags: ["Python", "CMake", "vcpkg"],
       github: "https://github.com/3akare/relay",
       live: null
     },
@@ -50,6 +50,15 @@ export default function Home() {
         "A system for real-time sign language recognition and translation.\n\nUses MediaPipe to extract keypoints from video, a Bi-LSTM model for gesture classification, and a gRPC pipeline for serving predictions.\n\nFinal text output is cleaned and translated with Gemini-2.0-flash.",
       tags: ["Next.js", "Python", "gRPC", "Tensorflow", "Gemini-2.0-flash"],
       github: "https://github.com/3akare/drater",
+      live: null
+    },
+    {
+      id: 5,
+      title: "imbed",
+      description:
+        "A lightweight in-memory key-value store supporting GET and SET with active/passive expiration.\n\nUses RESP for compatibility with existing Redis clients.\n\nNo persistence.",
+      tags: ["Java"],
+      github: "https://github.com/3akare/imbed",
       live: null
     }
   ];
