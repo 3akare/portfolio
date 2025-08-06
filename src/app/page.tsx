@@ -110,7 +110,7 @@ export default function Home() {
         {/* Intro section */}
         <section className="mb-4 md:mb-8 w-full max-w-[648px]">
           <h1 className="text-3xl sm:text-4xl font-bold mb-6">Hi, I&apos;m David Bakare.</h1>
-          <div className="mb-4 flex gap-2 items-center">
+          <div className="flex gap-2 items-center">
             <h2 className="text-xl text-accent-blue ">
               Software Engineer
             </h2>
