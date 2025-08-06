@@ -16,6 +16,7 @@ export default function Home() {
         "A system for real-time sign language recognition and translation.\n\nUses MediaPipe to extract keypoints from video, a Bi-LSTM model for gesture classification (trained in TensorFlow), and a gRPC pipeline for serving predictions.\n\nFinal text output is cleaned and translated with Gemini-2.0-flash.",
       tags: ["Next.js", "Python", "gRPC", "Tensorflow", "Gemini-2.0-flash"],
       github: "https://github.com/3akare/drater",
+      live: null
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ export default function Home() {
         "A lightweight build automation tool and package manager for C/C++ projects.\n\nInspired by Build2 (https://build2.org), it handles compilation, dependency resolution, and workspace management using a simple Python-based DSL.",
       tags: ["Python", "CMake"],
       github: "https://github.com/3akare/relay",
+      live: null
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ export default function Home() {
         "A minimalist terminal-based text editor built in C using ncurses.\n\nFeatures syntax highlighting, word-wrapping, and responsive keyboard navigation — optimized for speed and low memory usage.",
       tags: ["C", "ncurses"],
       github: "https://github.com/3akare/u0date",
+      live: null
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ export default function Home() {
         "A bytecode interpreter for a custom stack-based language.\n\nExecutes Monty instructions (push, pall, pop, etc.) by parsing `.m` files line-by-line, managing a doubly linked list stack structure in memory.\n\nBuilt on Linux (Ubuntu 20.04).",
       tags: ["C", "Ubuntu 20.04"],
       github: "https://github.com/3akare/monty",
+      live: null
     }
   ];
 
