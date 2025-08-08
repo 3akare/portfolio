@@ -8,6 +8,7 @@ import { cn } from "@/app/lib/utils"
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0)
+  const [activeContributions, setActiveContributions] = useState(0)
 
   const tools = [
     "JavaScript", "TypeScript", "Java", "Python", "C",
@@ -29,7 +30,7 @@ export default function Home() {
       id: 2,
       title: "u0date",
       description:
-        "A minimalist terminal-based text editor built in C using ncurses.\n\nSupports basic features like undo, redo, cursor movement, and editing modes (Normal/Insert). Designed for simplicity, speed, and low memory usage.",
+        "A minimalist terminal-based text editor built in C using ncurses.\n\nSupports basic features like undo, redo, cursor movement, and editing modes (Normal/Insert).\n\nDesigned for simplicity, speed, and low memory usage.",
       tags: ["C", "ncurses"],
       github: "https://github.com/3akare/u0date",
       live: null
@@ -38,7 +39,7 @@ export default function Home() {
       id: 3,
       title: "relay",
       description:
-        "A lightweight build automation tool and package manager for C/C++ projects.\n\nInspired by Build2 (https://build2.org), it handles compilation, dependency resolution, and workspace management using a simple Python-based DSL.",
+        "A lightweight build automation tool and package manager for C/C++ projects.\n\nIt handles compilation, dependency resolution, and workspace management using a simple Python-based DSL.\n\nInspired by Build2 (https://build2.org).",
       tags: ["Python", "CMake", "vcpkg"],
       github: "https://github.com/3akare/relay",
       live: null
@@ -56,16 +57,35 @@ export default function Home() {
       id: 5,
       title: "imbed",
       description:
-        "A lightweight in-memory key-value store supporting GET and SET with active/passive expiration.\n\nUses RESP for compatibility with existing Redis clients.\n\nNo persistence.",
+        "A lightweight in-memory key-value store supporting GET and SET with active/passive expiration.\n\nUses RESP for compatibility with existing Redis clients.\n\nNo persistence (yet).",
       tags: ["Java"],
       github: "https://github.com/3akare/imbed",
       live: null
     }
   ];
 
+  const contributions = [
+    {
+      "id": 1,
+      "title": "Universal Media Server",
+      "description": "A free, open-source DLNA, UPnP and HTTP/S media server written in Java.\n\nStreams or transcodes nearly any media format to TVs, gaming consoles, smartphones, and more with minimal setup.\n\nOriginally forked from PS3 Media Server for better stability, broader format support, and ease of use.",
+      "tags": ["Java", "DLNA/UPnP", "Open-Source"],
+      "github": "https://github.com/UniversalMediaServer",
+      "live": "https://www.universalmediaserver.com/"
+    },
+    {
+      "id": 2,
+      "title": "LF Energy – Hyphae APIS",
+      "description": "Open-source microgrid software for peer-to-peer renewable energy exchange.\n\nAutomates distribution and balancing of power between local storage systems over DC and AC grids.\n\nEvolved from Sony CSL’s APIS project, now part of LF Energy’s microgrid tools.",
+      "tags": ["Microgrid", "P2P energy", "Open-Source"],
+      "github": "https://github.com/hyphae",
+      "live": "https://lfenergy.org/projects/hyphae/"
+    }
+  ]
 
   return (
     <main className="flex flex-col h-screen bg-white text-black font-mono p-6 md:p-12">
+
       {/* Header */}
       <header className="flex justify-between items-center mb-12">
         <div className="text-lg">
@@ -124,11 +144,24 @@ export default function Home() {
               Software Engineer
             </h2>
             <span className="text-sm">@</span>
+            {/* <Link
+              href="https://www.polaroidhq.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={25}
+                height={25}
+                src="/polaroidhq.png"
+                alt="polaroid company logo"
+                className="inline-block rounded-full"
+              />
+            </Link> */}
             <Link
               href={"https://remita.net"}
               target="_blank"
               rel="noopener noreferrer">
-              <Image width={25} height={40} src={"/remita.png"} alt="company logo" className="inline-block"></Image>
+              <Image width={25} height={40} src={"/remita.png"} alt="remita company logo" className="inline-block"></Image>
             </Link>
           </div>
         </section>
@@ -146,7 +179,7 @@ export default function Home() {
         </section>
 
         {/* Projects section */}
-        <section>
+        <section className="mb-4 md:mb-8 w-full max-w-[648px]">
           <h2 className="text-xl mb-6 text-accent-blue">Projects</h2>
           <div className="space-y-4">
             {projects.slice().reverse().map((project, index) => (
@@ -160,35 +193,94 @@ export default function Home() {
               >
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">{project.title}</h3>
-                  {project.github && (
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black/60 hover:text-accent-blue transition-colors ml-2"
-                    >
-                      <Github size={16} />
-                      <span className="sr-only">GitHub</span>
-                    </Link>
-                  )}
-                  {project.live && (
-                    <Link
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black/60 hover:text-accent-blue transition-colors ml-2"
-                    >
-                      <ExternalLink size={16} />
-                      <span className="sr-only">Live Site</span>
-                    </Link>
-                  )}
+                  <div className="flex items-center justify-center gap-2">
+                    {project.github && (
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black/60 hover:text-accent-blue transition-colors ml-2"
+                      >
+                        <Github size={16} />
+                        <span className="sr-only">GitHub</span>
+                      </Link>
+                    )}
+                    {project.live && (
+                      <Link
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black/60 hover:text-accent-blue transition-colors ml-2"
+                      >
+                        <ExternalLink size={16} />
+                        <span className="sr-only">Live Site</span>
+                      </Link>
+                    )}
+                  </div>
                 </div>
-
                 {activeProject === index && (
                   <div className="mt-2 text-[0.8125rem] md:text-sm text-black/70 cursor-default">
                     <p className="mb-2 whitespace-pre-line">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, i) => (
+                        <span key={i} className="text-xs text-accent-blue">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Open source contributions */}
+        <section className="mb-4 md:mb-8 w-full max-w-[648px]">
+          <h2 className="text-xl mb-6 text-accent-blue">Open Source Contributions</h2>
+          <div className="space-y-4">
+            {contributions.slice().reverse().map((contribution, index) => (
+              <div
+                key={contribution.id}
+                className={cn(
+                  "border-l-2 pl-4 py-1 cursor-pointer",
+                  activeContributions === index ? "border-accent-blue" : "border-black/20",
+                )}
+                onClick={() => setActiveContributions(index)}
+              >
+                <div className="flex justify-between items-start">
+                  <h3 className="font-medium">{contribution.title}</h3>
+                  <div className="flex items-center justify-center gap-2">
+                    {contribution.github && (
+                      <Link
+                        href={contribution.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black/60 hover:text-accent-blue transition-colors ml-2"
+                      >
+                        <Github size={16} />
+                        <span className="sr-only">GitHub</span>
+                      </Link>
+                    )}
+                    {contribution.live && (
+                      <Link
+                        href={contribution.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black/60 hover:text-accent-blue transition-colors ml-2"
+                      >
+                        <ExternalLink size={16} />
+                        <span className="sr-only">Live Site</span>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+
+                {activeContributions === index && (
+                  <div className="mt-2 text-[0.8125rem] md:text-sm text-black/70 cursor-default">
+                    <p className="mb-2 whitespace-pre-line">{contribution.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {contribution.tags.map((tag, i) => (
                         <span key={i} className="text-xs text-accent-blue">
                           {tag}
                         </span>
