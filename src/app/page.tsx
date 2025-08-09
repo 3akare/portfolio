@@ -7,8 +7,8 @@ import Image from "next/image"
 import { cn } from "@/app/lib/utils"
 
 export default function Home() {
-  const [activeProject, setActiveProject] = useState(0)
-  const [activeContributions, setActiveContributions] = useState(0)
+  const [activeProject, setActiveProject] = useState<null | number>(null)
+  const [activeContributions, setActiveContributions] = useState<null | number>(null)
 
   const tools = [
     "JavaScript", "TypeScript", "Java", "Python", "C",
@@ -189,7 +189,9 @@ export default function Home() {
                   "border-l-2 pl-4 py-1 cursor-pointer",
                   activeProject === index ? "border-accent-blue" : "border-black/20",
                 )}
-                onClick={() => setActiveProject(index)}
+                onClick={() =>
+                  setActiveProject(activeProject === index ? null : index)
+                }
               >
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">{project.title}</h3>
@@ -218,8 +220,13 @@ export default function Home() {
                     )}
                   </div>
                 </div>
-                {activeProject === index && (
-                  <div className="mt-2 text-[0.8125rem] md:text-sm text-black/70 cursor-default">
+                <div
+                  className={cn(
+                    "overflow-hidden transition-all duration-500 ease-in-out",
+                    activeProject === index ? "max-h-96 mt-2" : "max-h-0"
+                  )}
+                >
+                  <div className="text-[0.8125rem] md:text-sm text-black/70 cursor-default">
                     <p className="mb-2 whitespace-pre-line">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, i) => (
@@ -229,10 +236,11 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
+
         </section>
 
         {/* Open source contributions */}
@@ -246,7 +254,9 @@ export default function Home() {
                   "border-l-2 pl-4 py-1 cursor-pointer",
                   activeContributions === index ? "border-accent-blue" : "border-black/20",
                 )}
-                onClick={() => setActiveContributions(index)}
+                onClick={() =>
+                  setActiveContributions(activeContributions === index ? null : index)
+                }
               >
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">{contribution.title}</h3>
@@ -276,8 +286,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                {activeContributions === index && (
-                  <div className="mt-2 text-[0.8125rem] md:text-sm text-black/70 cursor-default">
+                <div
+                  className={cn(
+                    "overflow-hidden transition-all duration-500 ease-in-out",
+                    activeContributions === index ? "max-h-96 mt-2" : "max-h-0"
+                  )}
+                >
+                  <div className="text-[0.8125rem] md:text-sm text-black/70 cursor-default">
                     <p className="mb-2 whitespace-pre-line">{contribution.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {contribution.tags.map((tag, i) => (
@@ -287,7 +302,7 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
