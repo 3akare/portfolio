@@ -164,7 +164,7 @@ export default function Home() {
               <Image width={25} height={40} src={"/remita.png"} alt="remita company logo" className="inline-block"></Image>
             </Link> */}
             <Link
-              href={"#"}
+              href={"https://github.com/cadro-com"}
               rel="noopener noreferrer">
               <Image width={20} height={20} src={"/cadro.png"} alt="cadro company logo" className="inline-block"></Image>
             </Link>
