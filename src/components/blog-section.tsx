@@ -32,7 +32,7 @@ export function BlogSection() {
   }
 
   return (
-    <section className="mb-4 md:mb-8 w-full max-w-[648px]">
+    <section className="mb-12 w-full max-w-[648px]">
       <h2 className="text-xl mb-6 text-accent-blue">Recent Posts</h2>
 
       {posts.length === 0 ? (
