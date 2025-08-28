@@ -55,7 +55,7 @@ export default function Projects() {
         }
     ];
     return (
-        <section className="mb-4 md:mb-8 w-full max-w-[648px]">
+        <section className="mb-12 w-full max-w-[648px]">
             <h2 className="text-xl mb-6 text-accent-blue">Projects</h2>
             <div className="space-y-4">
                 {projects.slice().reverse().map((project, index) => (
