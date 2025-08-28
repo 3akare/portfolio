@@ -10,7 +10,7 @@ export function BlogSection() {
   const [posts, setPosts] = useState<BlogPost[]>([])
 
   useEffect(() => {
-    getRecentBlogPosts(4).then(setPosts)
+    getRecentBlogPosts(2).then(setPosts)
   }, [])
 
   const formatDate = (dateString: string) => {
