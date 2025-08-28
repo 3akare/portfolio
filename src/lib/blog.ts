@@ -30,7 +30,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   return blogData.posts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 }
 
-export async function getRecentBlogPosts(limit = 4): Promise<BlogPost[]> {
+export async function getRecentBlogPosts(limit = 2): Promise<BlogPost[]> {
   const posts = await getBlogPosts()
   return posts.slice(0, limit)
 }
