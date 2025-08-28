@@ -32,12 +32,12 @@ export default function Home() {
         <Tools />
         {/* Socials */}
         <Connect />
+        {/* Blog section */}
+        <BlogSection />
         {/* Projects section */}
         <Projects />
         {/* Open source contributions */}
         <OpenSource />
-        {/* Blog section */}
-        <BlogSection />
       </div>
     </main>
   )
