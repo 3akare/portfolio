@@ -1,17 +1,12 @@
 import type React from "react"
+import { jetbrainsMono } from "@/app/fonts"
+import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
-import { JetBrains_Mono } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/app/components/theme-provider"
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
 
 export const metadata: Metadata = {
   title: "3akare | Software Engineer",
-  description: "Personal portfolio of David Bakare, a software engineer"
+  description: "Software Engineer Portfolio & Blog",
 }
 
 export default function RootLayout({
@@ -20,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" style={{colorScheme:"dark"}}>
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
-      <body className={`${jetbrainsMono.variable} font-mono`}>
+      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
@@ -32,5 +27,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-import './globals.css'
