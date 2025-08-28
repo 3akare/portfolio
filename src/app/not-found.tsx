@@ -1,14 +1,9 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import Header from "../components/header"
-import Footer from "../components/footer"
 
 export default function NotFound() {
     return (
         <main className="flex flex-col h-screen bg-white text-black font-mono p-6 md:p-12">
-            {/* Header */}
-            <Header />
-
             {/* Main content */}
             <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto">
                 <section className="text-center space-y-6">
@@ -48,9 +43,6 @@ export default function NotFound() {
                     </div>
                 </section>
             </div>
-
-            {/* Footer */}
-            <Footer />
         </main>
     )
 }
