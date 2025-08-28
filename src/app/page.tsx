@@ -6,6 +6,7 @@ import Connect from "../components/connect"
 import Projects from "../components/projects"
 import OpenSource from "../components/open-source"
 import Footer from "../components/footer"
+import { BlogSection } from "@/components/blog-section"
 
 export default function Home() {
   return (
@@ -40,6 +41,8 @@ export default function Home() {
         <Projects />
         {/* Open source contributions */}
         <OpenSource />
+        {/* Blog section */}
+        <BlogSection />
       </div>
       {/* Footer */}
       <Footer />

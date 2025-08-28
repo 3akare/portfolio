@@ -1,4 +1,4 @@
-import { FilePenLineIcon, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export default function Connect() {
@@ -39,13 +39,6 @@ export default function Connect() {
                 >
                     <Twitter size={20} />
                     <span className="sr-only">twitter</span>
-                </Link>
-                <Link
-                    href="/blog"
-                    className="flex items-center gap-2 text-black hover:text-accent-blue transition-colors border border-gray-200 px-3 py-2 rounded hover:border-accent-blue"
-                >
-                    <FilePenLineIcon size={20} />
-                    <span className="sr-only">blog</span>
                 </Link>
             </div>
         </section>
