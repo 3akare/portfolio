@@ -4,7 +4,9 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { BlogContent, BlogPost } from "@/lib/blog"
-
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
+import rehypeHighlight from "rehype-highlight"
 
 interface BlogPostClientPageProps {
   post: BlogPost
@@ -71,11 +73,16 @@ export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
         </header>
 
         {/* Content */}
-        <div className="space-y-6 blog-content">
+        <div className="space-y-6 prose prose-sm md:prose-base">
           {post.content.map((block, index) => (
             <div key={index}>
               {block.type === "text" ? (
-                <p className="text-sm leading-relaxed text-black/80">{block.content}</p>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {block.content}
+                </ReactMarkdown>
               ) : (
                 <div className="space-y-2">
                   <Image
@@ -97,7 +104,6 @@ export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
           <div className="flex items-center justify-between">
             <div className="text-xs text-black/60">
               Published {formatDate(post.publishedAt)}
-              {post.updatedAt !== post.publishedAt && <span> • Updated {formatDate(post.updatedAt)}</span>}
             </div>
             <Link href="/blog" className="text-sm text-accent-blue hover:underline">
               ← Back
