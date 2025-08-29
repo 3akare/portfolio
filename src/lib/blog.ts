@@ -39,3 +39,16 @@ export async function getBlogPost(id: string): Promise<BlogPost | null> {
   const posts = await getBlogPosts()
   return posts.find((post) => post.id === id) || null
 }
+
+export function generateExcerpt(content: BlogContent[], maxLength = 150): string {
+  const textContent = content
+    .filter((item) => item.type === "text")
+    .map((item) => item.content)
+    .join(" ")
+
+  if (textContent.length <= maxLength) {
+    return textContent
+  }
+
+  return textContent.substring(0, maxLength).trim() + "..."
+}

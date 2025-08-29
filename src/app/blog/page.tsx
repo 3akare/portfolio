@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import type { BlogContent, BlogPost } from "@/lib/blog"
-import { getBlogPosts } from "@/lib/blog"
+import { getBlogPosts, generateExcerpt } from "@/lib/blog"
 
 export default function BlogPage() {
     const [posts, setPosts] = useState<BlogPost[]>([])
@@ -74,7 +74,7 @@ export default function BlogPage() {
                                             {post.featured && (<span className="bg-accent-blue/10 text-accent-blue px-2 py-1 rounded text-xs">Featured</span>)}
                                         </div>
                                     </div>
-                                    <p className="text-sm text-black/70 leading-relaxed">{post.excerpt}</p>
+                                    <p className="text-sm text-black/70 leading-relaxed">{generateExcerpt(post.content)}</p>
                                     <div className="flex flex-wrap gap-2">
                                         {post.tags.map((tag, i) => (<span key={i} className="text-xs text-accent-blue">{tag}</span>))}
                                     </div>

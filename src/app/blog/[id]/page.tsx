@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { notFound } from "next/navigation"
-import { getBlogPost } from "@/lib/blog"
+import { getBlogPost, generateExcerpt } from "@/lib/blog"
 import BlogPostClientPage from "./blog-post-client-page"
 import type { Metadata } from "next"
 
@@ -17,6 +17,8 @@ export async function generateMetadata({
     }
   }
 
+  const postExcerpt = generateExcerpt(post.content);
+
   const firstImage = post.content.find(block => block.type === "image")
   const imageUrl = firstImage
     ? `https://3akare.vercel.app${firstImage.content}`
@@ -24,12 +26,12 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    description: post.excerpt,
+    description: postExcerpt,
     keywords: post.tags.join(", "),
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: postExcerpt,
       url: `https://3akare.vercel.app/blog/${post.id}`,
       type: "article",
       images: [{ url: imageUrl, alt: post.title }],
@@ -41,7 +43,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: postExcerpt,
       images: [imageUrl],
     },
   }
