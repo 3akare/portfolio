@@ -1,7 +1,6 @@
 import type React from "react"
 import { Analytics } from "@vercel/analytics/next"
 import { jetbrainsMono } from "@/app/fonts"
-import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import "./globals.css"
 
@@ -16,15 +15,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
       <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
-        </ThemeProvider>
-        <Analytics />
+          <Analytics />
       </body>
     </html>
   )

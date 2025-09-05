@@ -58,6 +58,33 @@ const blogData: BlogData = {
       tags: ["GitHub Actions", "CI/CD", "DevOps", "Docker", "Linux"],
       featured: false,
     },
+    {
+      id: "2",
+      title: "How to Get $2,300+ in Google Cloud Credits for Just ₦5000",
+      content: [
+        {
+          type: "image",
+          content: "/assets/blog-2/image-1.webp",
+          alt: "Google Cloud Console"
+        },
+        {
+          type: "text",
+          content:
+            "The whole idea is to apply for the GCP Cloud Startup Program.\n\nThey offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups. I'm not that greedy, so I'm going for the lower tier.\n\nBut there's a catch. When requesting the credits, you can't use a personal email account (@gmail.com). You must use a business email account (@company.com).\n\nAlso, the domain name of the email address you use to register must match the one you used to set up your console and billing account."
+        },
+        {
+          type: "text",
+          content:
+            "### Steps\n\n**1. Buy a domain name**\nThis is the only cost. Get a domain name and opt for cheap TLDs like .xyz, .co, or .cc. Use Namecheap (avoid GoDaddy).\n\n**2. Create a Zoho Free account**\nOnce you have a domain name (e.g. outlinr.xyz), you'll need email hosting attached to that domain to get something like [bakare@outlinr.xyz](mailto:bakare@outlinr.xyz). Luckily, Zoho provides up to 5 email addresses for free, for life. Another option is Google Workspace, but it isn't cheap.\n\nNote: you'll need to configure a few things-A, TXT, CNAME, and MX records. It's a hassle, but with Gemini specifically, you'll be fine.\n\n**3. Create a Google Cloud Console account**\nThis part is tricky. If you use Zoho Mail, you can't just create one directly-you first need to verify that you own the domain name using Google Cloud Identity verification. This means setting up DNS records on your Namecheap dashboard again.\n\nAfter verification, the rest is easy. As a welcome gift, Google gives you $300 in free credits for 90 days.\n\n(I stopped here and will continue in December when my credits run out.)\n\n**4. Apply for the Cloud Startup Program**\nAccording to Redditors, the process is straightforward. You apply and get a response within 3 to 5 working days. The success rate is about 90%.\n\nYou'll need to upload:\n\n* Your name\n* Your company email\n* Your billing information (from your company console)\n* The URL of your existing site. You'll need to build and deploy a landing page so they know you're serious. The domain name must match your company email as well. Vercel is free, so this should be simple.\n\n**Result:** Receive between $2,000 and $300,000 in credits.\n\nAnd that's it."
+        }
+      ],
+      excerpt: "The whole idea is to apply for the GCP Cloud Startup Program. They offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups...",
+      author: "David Bakare",
+      publishedAt: "2025-09-05T16:16:20Z",
+      tags: ["Cloud", "Google Cloud", "Startup", "Credits", "Budgeting"],
+      featured: false
+    }
+
   ],
   lastUpdated: new Date().toISOString(),
 }
