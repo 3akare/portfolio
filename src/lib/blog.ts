@@ -60,7 +60,7 @@ const blogData: BlogData = {
     },
     {
       id: "2",
-      title: "How to Get $2,300+ in Google Cloud Credits for Just ₦5000",
+      title: "How to Get $2,300+ in Google Cloud Credits for Just N5000",
       content: [
         {
           type: "image",
