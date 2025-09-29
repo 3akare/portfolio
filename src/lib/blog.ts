@@ -60,7 +60,7 @@ const blogData: BlogData = {
     },
     {
       id: "2",
-      title: "How to Get $2,300+ in Google Cloud Credits for Just N5000",
+      title: "How to Get $2,300+ in Google Cloud Credits",
       content: [
         {
           type: "image",
@@ -70,7 +70,7 @@ const blogData: BlogData = {
         {
           type: "text",
           content:
-            "The whole idea is to apply for the GCP Cloud Startup Program.\n\nThey offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups. I'm not that greedy, so I'm going for the lower tier.\n\nBut there's a catch. When requesting the credits, you can't use a personal email account (@gmail.com). You must use a business email account (@company.com).\n\nAlso, the domain name of the email address you use to register must match the one you used to set up your console and billing account."
+            "The idea is to apply for the GCP Cloud Startup Program.\n\nThey offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups. I'm not that greedy, so I'm going for the lower tier.\n\nBut there's a catch. When requesting the credits, you can't use a personal email account (@gmail.com). You must use a business email account (@company.com).\n\nAlso, the domain name of the email address you use to register must match the one you used to set up your console and billing account."
         },
         {
           type: "text",
@@ -78,13 +78,59 @@ const blogData: BlogData = {
             "### Steps\n\n**1. Buy a domain name**\nThis is the only cost. Get a domain name and opt for cheap TLDs like .xyz, .co, or .cc. Use Namecheap (avoid GoDaddy).\n\n**2. Create a Zoho Free account**\nOnce you have a domain name (e.g. outlinr.xyz), you'll need email hosting attached to that domain to get something like [bakare@outlinr.xyz](mailto:bakare@outlinr.xyz). Luckily, Zoho provides up to 5 email addresses for free, for life. Another option is Google Workspace, but it isn't cheap.\n\nNote: you'll need to configure a few things-A, TXT, CNAME, and MX records. It's a hassle, but with Gemini specifically, you'll be fine.\n\n**3. Create a Google Cloud Console account**\nThis part is tricky. If you use Zoho Mail, you can't just create one directly-you first need to verify that you own the domain name using Google Cloud Identity verification. This means setting up DNS records on your Namecheap dashboard again.\n\nAfter verification, the rest is easy. As a welcome gift, Google gives you $300 in free credits for 90 days.\n\n(I stopped here and will continue in December when my credits run out.)\n\n**4. Apply for the Cloud Startup Program**\nAccording to Redditors, the process is straightforward. You apply and get a response within 3 to 5 working days. The success rate is about 90%.\n\nYou'll need to upload:\n\n* Your name\n* Your company email\n* Your billing information (from your company console)\n* The URL of your existing site. You'll need to build and deploy a landing page so they know you're serious. The domain name must match your company email as well. Vercel is free, so this should be simple.\n\n**Result:** Receive between $2,000 and $300,000 in credits.\n\nAnd that's it."
         }
       ],
-      excerpt: "The whole idea is to apply for the GCP Cloud Startup Program. They offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups...",
+      excerpt: "The idea is to apply for the GCP Cloud Startup Program. They offer between $2,000 and $300,000 in GCP credits to AI and Web3 startups...",
       author: "David Bakare",
       publishedAt: "2025-09-05T16:16:20Z",
       tags: ["Cloud", "Google Cloud", "Startup", "Credits", "Budgeting"],
       featured: false
-    }
+    },
+    {
+      id: "3",
+      title: "How I Optimized My macOS Workspace to Save Energy Without Losing Productivity",
+      content: [
+        {
+          type: "image",
+          content: "/assets/blog-3/image-1.png",
+          alt: "macOS Energy Optimization"
+        },
+        {
+          type: "text",
+          content:
+            "This blog post is about how I set up my workspace to consume as little energy as possible without completely crippling my workflow.\n\n**Operating system:** macOS"
+        },
+        {
+          type: "text",
+          content:
+            "### The Backstory\nOver the past few months, I’ve been hunting for a text editor that doesn’t murder my battery. I switched from VS Code to Neovim because it’s a TUI and far lighter, but the endless configuration nearly broke me.\n\nTo learn, I started the *Advent of Neovim* in December 2024. While others exchanged Christmas gifts, I was busy learning Lua and running `:nvimTutor`. By January, I had:\n\n* LSPs for my main languages\n* Treesitter for syntax highlighting\n* Oil.nvim as a file explorer\n\nIt worked, but navigation was clunky. I spent too much time mashing keys just to move across files. Eventually, I caved and returned to VS Code. With minimal extensions (no Copilot—AI in editors is too power-hungry), life was simpler."
+        },
+        {
+          type: "text",
 
+          content:
+            "### The Zed Experiment\nThen came **Zed**: built with Rust, lightweight, beautiful, and marketed as the future. I tried it. At first, it was smooth, but AI features often failed when using my own API key. Strange.\n\nAfter a few days, I noticed unusual battery drain. One session with two Zed windows, Docker (MySQL), and Chrome open drained my Mac from 100% to 10% in under 90 minutes. Normally, the same setup with VS Code lasts 4–6 hours.\n\nChecking Activity Monitor, Zed alone ate over 60% of the battery. Chrome (6 tabs) sat around 2–4%, and Docker just 6%. I suspected Zed was forcing the GPU to run at full tilt.\n\nThat was the final straw. I needed an editor that respected my battery."
+        },
+        {
+          type: "text",
+          content:
+            "### A New Dawn: Back to Neovim\nSo I’m going back to Neovim—but smarter this time.\n\n**Problems last time:**\n* Everything was new and overwhelming.\n* Too few plugins, making development painful.\n* Misunderstood Neovim’s performance model. I thought plugins would eat resources like VS Code extensions, but Neovim is fundamentally just a text buffer. When idle, its CPU usage is negligible.\n\n**Solution:** I skipped the config hell and installed **Astronvim** (astronvim.com). It ships with sensible defaults, LSPs, and Treesitter preconfigured. Yes, it has some extras I may not need, but overall it’s lighter and more efficient than GUI editors."
+        },
+        {
+          type: "text",
+          content:
+            "### Extra Energy-Saving Techniques\nI didn’t stop at Neovim. Here’s how I optimized the rest of my macOS setup:\n\n**1. Browser**  \nChrome is my daily driver but it’s notoriously resource-heavy. My fix is **Safari**—lightweight, energy-efficient, and good enough for docs and ChatGPT. Chrome stays installed for accounts and passwords, but Safari is my main dev browser.\n\n**2. MySQL & Services**  \nRunning databases in Docker felt clever, but spinning up the entire daemon for one service is wasteful. My fix: install MySQL locally with Brew:  \n```bash\nbrew services start mysql\n```\nWay faster than waiting for Docker to boot.\n\n**3. Disable Spotlight Indexing**  \nSpotlight constantly eats CPU while indexing. I selectively disable it using `mdutil`:\n```bash\nsudo mdutil -i off /\n# Turn back on\nsudo mdutil -i on /\n```\nThis prevents background drain.\n\n**4. Low Power Mode (LPM)**  \nUseful, but tricky. LPM slows the CPU, which is fine for light work (docs, reading). But for heavy tasks, it can backfire: slower CPU = longer task = more energy used. My rule: enable LPM for light work, disable it for heavy lifting."
+        },
+        {
+          type: "text",
+          content:
+            "### Final Thoughts\nThis setup isn’t perfect, but it’s balanced. Neovim with Astronvim gives me a fast, battery-friendly editor. Safari trims browser overhead. Running MySQL locally avoids Docker’s bloat. Spotlight indexing is under control, and LPM is used strategically.\n\nResult: my Mac lasts significantly longer on battery while still letting me get real work done."
+        }
+      ],
+      excerpt: "Here’s how I optimized my macOS workspace to save energy without sacrificing productivity: Neovim with Astronvim, Safari over Chrome, local MySQL instead of Docker, controlled Spotlight indexing, and smarter use of Low Power Mode.",
+      author: "David Bakare",
+      publishedAt: "2025-09-29T15:20:00Z",
+      tags: ["macOS", "Productivity", "Energy Saving", "Neovim", "Developer Setup"],
+      featured: false
+    }
   ],
   lastUpdated: new Date().toISOString(),
 }

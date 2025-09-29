@@ -18,14 +18,14 @@ export default function Home() {
             <h2 className="text-xl text-accent-blue ">
               Software Engineer
             </h2>
-            <span className="text-sm">@</span>
+            {/* <span className="text-sm">@</span>
             <Image
               width={20}
               height={20}
               src={"/outlinr-logo.png"}
               alt="cadro company logo"
               className="inline-block"
-            ></Image>
+            ></Image> */}
           </div>
         </section>
         {/* Tools Section */}
