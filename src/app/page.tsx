@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import Tools from "../components/tools"
 import Connect from "../components/connect"
 import Projects from "../components/projects"

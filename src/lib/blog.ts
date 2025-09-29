@@ -86,7 +86,7 @@ const blogData: BlogData = {
     },
     {
       id: "3",
-      title: "How I Optimized My macOS Workspace to Save Energy Without Losing Productivity",
+      title: "How I Optimized My Workspace to Save Energy Without Losing Productivity",
       content: [
         {
           type: "image",
@@ -101,7 +101,7 @@ const blogData: BlogData = {
         {
           type: "text",
           content:
-            "### The Backstory\nOver the past few months, I’ve been hunting for a text editor that doesn’t murder my battery. I switched from VS Code to Neovim because it’s a TUI and far lighter, but the endless configuration nearly broke me.\n\nTo learn, I started the *Advent of Neovim* in December 2024. While others exchanged Christmas gifts, I was busy learning Lua and running `:nvimTutor`. By January, I had:\n\n* LSPs for my main languages\n* Treesitter for syntax highlighting\n* Oil.nvim as a file explorer\n\nIt worked, but navigation was clunky. I spent too much time mashing keys just to move across files. Eventually, I caved and returned to VS Code. With minimal extensions (no Copilot—AI in editors is too power-hungry), life was simpler."
+            "### The Backstory\nOver the past few months, I've been hunting for a text editor that doesn't murder my battery. I switched from VS Code to Neovim because it's a TUI and far lighter, but the endless configuration nearly broke me.\n\nTo learn, I started the *Advent of Neovim* in December 2024. While others exchanged Christmas gifts, I was busy learning Lua and running `:nvimTutor`. By January, I had:\n\n* LSPs for my main languages\n* Treesitter for syntax highlighting\n* Oil.nvim as a file explorer\n\nIt worked, but navigation was clunky. I spent too much time mashing keys just to move across files. Eventually, I caved and returned to VS Code. With minimal extensions (no Copilot—AI in editors is too power-hungry), life was simpler."
         },
         {
           type: "text",
@@ -112,20 +112,20 @@ const blogData: BlogData = {
         {
           type: "text",
           content:
-            "### A New Dawn: Back to Neovim\nSo I’m going back to Neovim—but smarter this time.\n\n**Problems last time:**\n* Everything was new and overwhelming.\n* Too few plugins, making development painful.\n* Misunderstood Neovim’s performance model. I thought plugins would eat resources like VS Code extensions, but Neovim is fundamentally just a text buffer. When idle, its CPU usage is negligible.\n\n**Solution:** I skipped the config hell and installed **Astronvim** (astronvim.com). It ships with sensible defaults, LSPs, and Treesitter preconfigured. Yes, it has some extras I may not need, but overall it’s lighter and more efficient than GUI editors."
+            "### A New Dawn: Back to Neovim\nSo I'm going back to Neovim—but smarter this time.\n\n**Problems last time:**\n* Everything was new and overwhelming.\n* Too few plugins, making development painful.\n* Misunderstood Neovim's performance model. I thought plugins would eat resources like VS Code extensions, but Neovim is fundamentally just a text buffer. When idle, its CPU usage is negligible.\n\n**Solution:** I skipped the config hell and installed **Astronvim** (astronvim.com). It ships with sensible defaults, LSPs, and Treesitter preconfigured. Yes, it has some extras I may not need, but overall it's lighter and more efficient than GUI editors."
         },
         {
           type: "text",
           content:
-            "### Extra Energy-Saving Techniques\nI didn’t stop at Neovim. Here’s how I optimized the rest of my macOS setup:\n\n**1. Browser**  \nChrome is my daily driver but it’s notoriously resource-heavy. My fix is **Safari**—lightweight, energy-efficient, and good enough for docs and ChatGPT. Chrome stays installed for accounts and passwords, but Safari is my main dev browser.\n\n**2. MySQL & Services**  \nRunning databases in Docker felt clever, but spinning up the entire daemon for one service is wasteful. My fix: install MySQL locally with Brew:  \n```bash\nbrew services start mysql\n```\nWay faster than waiting for Docker to boot.\n\n**3. Disable Spotlight Indexing**  \nSpotlight constantly eats CPU while indexing. I selectively disable it using `mdutil`:\n```bash\nsudo mdutil -i off /\n# Turn back on\nsudo mdutil -i on /\n```\nThis prevents background drain.\n\n**4. Low Power Mode (LPM)**  \nUseful, but tricky. LPM slows the CPU, which is fine for light work (docs, reading). But for heavy tasks, it can backfire: slower CPU = longer task = more energy used. My rule: enable LPM for light work, disable it for heavy lifting."
+            "### Extra Energy-Saving Techniques\nI didn't stop at Neovim. Here's how I optimized the rest of my macOS setup:\n\n**1. Browser**  \nChrome is my daily driver but it's notoriously resource-heavy. My fix is **Safari**—lightweight, energy-efficient, and good enough for docs and ChatGPT. Chrome stays installed for accounts and passwords, but Safari is my main dev browser.\n\n**2. MySQL & Services**  \nRunning databases in Docker felt clever, but spinning up the entire daemon for one service is wasteful. My fix: install MySQL locally with Brew:  \n```bash\nbrew services start mysql\n```\nWay faster than waiting for Docker to boot.\n\n**3. Disable Spotlight Indexing**  \nSpotlight constantly eats CPU while indexing. I selectively disable it using `mdutil`:\n```bash\nsudo mdutil -i off /\n# Turn back on\nsudo mdutil -i on /\n```\nThis prevents background drain.\n\n**4. Low Power Mode (LPM)**  \nUseful, but tricky. LPM slows the CPU, which is fine for light work (docs, reading). But for heavy tasks, it can backfire: slower CPU = longer task = more energy used. My rule: enable LPM for light work, disable it for heavy lifting."
         },
         {
           type: "text",
           content:
-            "### Final Thoughts\nThis setup isn’t perfect, but it’s balanced. Neovim with Astronvim gives me a fast, battery-friendly editor. Safari trims browser overhead. Running MySQL locally avoids Docker’s bloat. Spotlight indexing is under control, and LPM is used strategically.\n\nResult: my Mac lasts significantly longer on battery while still letting me get real work done."
+            "### Final Thoughts\nThis setup isn't perfect, but it's balanced. Neovim with Astronvim gives me a fast, battery-friendly editor. Safari trims browser overhead. Running MySQL locally avoids Docker's bloat. Spotlight indexing is under control, and LPM is used strategically.\n\nResult: my Mac lasts significantly longer on battery while still letting me get real work done."
         }
       ],
-      excerpt: "Here’s how I optimized my macOS workspace to save energy without sacrificing productivity: Neovim with Astronvim, Safari over Chrome, local MySQL instead of Docker, controlled Spotlight indexing, and smarter use of Low Power Mode.",
+      excerpt: "Here's how I optimized my macOS workspace to save energy without sacrificing productivity: Neovim with Astronvim, Safari over Chrome, local MySQL instead of Docker, controlled Spotlight indexing, and smarter use of Low Power Mode.",
       author: "David Bakare",
       publishedAt: "2025-09-29T15:20:00Z",
       tags: ["macOS", "Productivity", "Energy Saving", "Neovim", "Developer Setup"],
