@@ -8,7 +8,8 @@ import type { Metadata } from "next"
 export async function generateMetadata({
   params,
 }: any): Promise<Metadata> {
-  const post = await getBlogPost(params.id)
+  const awaitedParams = await params;
+  const post = await getBlogPost(awaitedParams.id)
 
   if (!post) {
     return {
@@ -51,7 +52,9 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: any) {
-  const post = await getBlogPost(params.id)
+  // 2. AWAIT the params object before accessing its properties
+  const awaitedParams = await params;
+  const post = await getBlogPost(awaitedParams.id)
 
   if (!post) {
     notFound()

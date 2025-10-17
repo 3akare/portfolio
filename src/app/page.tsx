@@ -3,6 +3,8 @@ import Connect from "../components/connect"
 import Projects from "../components/projects"
 import OpenSource from "../components/open-source"
 import { BlogSection } from "@/components/blog-section"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -16,14 +18,16 @@ export default function Home() {
             <h2 className="text-xl text-accent-blue ">
               Software Engineer
             </h2>
-            {/* <span className="text-sm">@</span>
-            <Image
-              width={20}
-              height={20}
-              src={"/outlinr-logo.png"}
-              alt="cadro company logo"
-              className="inline-block"
-            ></Image> */}
+            <span className="text-sm">@</span>
+            <Link href={"https://outlinr.xyz"} target="_blank">
+              <Image
+                width={20}
+                height={20}
+                src={"/favicon.svg"}
+                alt="outlinr"
+                className="inline-block"
+              ></Image>
+            </Link>
           </div>
         </section>
         {/* Tools Section */}
