@@ -34,12 +34,12 @@ export default function Home() {
         <Tools />
         {/* Socials */}
         <Connect />
+        {/* Open source contributions */}
+        <OpenSource />
         {/* Blog section */}
         <BlogSection />
         {/* Projects section */}
         <Projects />
-        {/* Open source contributions */}
-        <OpenSource />
       </div>
     </main>
   )

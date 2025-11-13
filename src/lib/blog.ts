@@ -144,6 +144,14 @@ export async function getRecentBlogPosts(limit = 2): Promise<BlogPost[]> {
   return posts.slice(0, limit)
 }
 
+export async function getPaginatedBlogPosts(page = 1, limit = 5): Promise<{ posts: BlogPost[], totalPages: number }> {
+  const allPosts = await getBlogPosts();
+  const totalPages = Math.ceil(allPosts.length / limit);
+  const offset = (page - 1) * limit;
+  const posts = allPosts.slice(offset, offset + limit);
+  return { posts, totalPages };
+}
+
 export async function getBlogPost(id: string): Promise<BlogPost | null> {
   const posts = await getBlogPosts()
   return posts.find((post) => post.id === id) || null

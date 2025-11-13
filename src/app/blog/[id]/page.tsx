@@ -52,7 +52,6 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: any) {
-  // 2. AWAIT the params object before accessing its properties
   const awaitedParams = await params;
   const post = await getBlogPost(awaitedParams.id)
 
@@ -60,5 +59,11 @@ export default async function BlogPostPage({
     notFound()
   }
 
-  return <BlogPostClientPage post={post} />
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
+  return <BlogPostClientPage post={post} formattedDate={formattedDate} />
 }

@@ -10,16 +10,10 @@ import rehypeHighlight from "rehype-highlight"
 
 interface BlogPostClientPageProps {
   post: BlogPost
+  formattedDate: string;
 }
 
-export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-  }
+export default function BlogPostClientPage({ post, formattedDate }: BlogPostClientPageProps) {
 
   const getReadingTime = (content: BlogContent[]) => {
     const textContent = content
@@ -49,7 +43,7 @@ export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
               <span>By {post.author}</span>
               <div className="flex items-center gap-1">
                 <Calendar size={14} />
-                <span>{formatDate(post.publishedAt)}</span>
+                <span>{formattedDate}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock size={14} />
@@ -103,7 +97,7 @@ export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
         <footer className="mt-12 pt-8 border-t border-black/10">
           <div className="flex items-center justify-between">
             <div className="text-xs text-black/60">
-              Published {formatDate(post.publishedAt)}
+              Published {formattedDate}
             </div>
             <Link href="/blog" className="text-sm text-accent-blue hover:underline">
               ← Back
