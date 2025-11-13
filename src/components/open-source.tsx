@@ -29,7 +29,7 @@ export default function OpenSource() {
   const [activeContributions, setActiveContributions] = useState<null | number>(null)
   return (
     <section className="mb-12 w-full max-w-[648px]">
-      <h2 className="text-xl mb-6 text-accent-blue">Open Source Contributions</h2>
+      <h2 className="text-xl mb-6 text-accent-blue">OSS Contributions</h2>
       <div className="space-y-4">
         {contributions.slice().reverse().map((contribution, index) => (
           <div

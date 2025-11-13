@@ -34,10 +34,10 @@ export default function Home() {
         <Tools />
         {/* Socials */}
         <Connect />
-        {/* Open source contributions */}
-        <OpenSource />
         {/* Blog section */}
         <BlogSection />
+        {/* Open source contributions */}
+        <OpenSource />
         {/* Projects section */}
         <Projects />
       </div>

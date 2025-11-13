@@ -1,7 +1,6 @@
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -10,17 +9,16 @@ import {
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import type { BlogContent, BlogPost } from "@/lib/blog"
-import { getPaginatedBlogPosts, generateExcerpt } from "@/lib/blog"
+import type { BlogContent } from "@/lib/blog"
+import { getPaginatedBlogPosts, generateExcerpt } from "@/lib/blog";
 
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams?: {
-    page?: string
-  }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const currentPage = Number(searchParams?.page) || 1
+  const awaitedSearchParams = await searchParams;
+  const currentPage = Number(awaitedSearchParams?.page) || 1;
   const { posts, totalPages } = await getPaginatedBlogPosts(currentPage)
 
   const formatDate = (dateString: string) => {

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { notFound } from "next/navigation"
 import { getBlogPost, generateExcerpt } from "@/lib/blog"
 import BlogPostClientPage from "./blog-post-client-page"
@@ -7,9 +5,11 @@ import type { Metadata } from "next"
 
 export async function generateMetadata({
   params,
-}: any): Promise<Metadata> {
-  const awaitedParams = await params;
-  const post = await getBlogPost(awaitedParams.id)
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const post = await getBlogPost(id);
 
   if (!post) {
     return {
@@ -51,9 +51,11 @@ export async function generateMetadata({
 
 export default async function BlogPostPage({
   params,
-}: any) {
-  const awaitedParams = await params;
-  const post = await getBlogPost(awaitedParams.id)
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const post = await getBlogPost(id);
 
   if (!post) {
     notFound()
