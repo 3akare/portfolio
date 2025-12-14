@@ -19,13 +19,13 @@ export default function Home() {
               Software Engineer
             </h2>
             <span className="text-sm">@</span>
-            <Link href={"https://outlinr.xyz"} target="_blank">
+            <Link href={"https://remita.net"} target="_blank">
               <Image
-                width={20}
-                height={20}
-                src={"/favicon.svg"}
+                width={60}
+                height={100}
+                src={"/remita.svg"}
                 alt="outlinr"
-                className="inline-block"
+                className="inline-block pb-1.5"
               ></Image>
             </Link>
           </div>
