@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto">
         {/* Intro section */}
         <section className="mb-4 md:mb-8 w-full max-w-[648px]">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-6">Hi, I&apos;m David Bakare.</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6">David Bakare.</h1>
           <div className="flex gap-2 items-center">
             <h2 className="text-xl text-accent-blue ">
               Software Engineer
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </section>
         {/* Tools Section */}
-        <Tools />
+        {/* <Tools /> */}
         {/* Socials */}
         <Connect />
         {/* Blog section */}
