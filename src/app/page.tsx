@@ -29,10 +29,10 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        {/* Blog section */}
-        <BlogSection />
         {/* Socials */}
         <Connect />
+        {/* Blog section */}
+        <BlogSection />
         {/* Open source contributions */}
         <OpenSource />
         {/* Projects section */}
