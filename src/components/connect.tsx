@@ -9,7 +9,7 @@ const socials = [
 export default function Connect() {
     return (
         <section className="mb-12">
-            <h2 className="text-xl mb-6 text-accent-blue">Connect</h2>
+            {/* <h2 className="text-xl mb-6 text-accent-blue">Connect</h2> */}
             <div className="flex flex-wrap gap-6 items-center">
                 {socials.map((social) =>
                     <Link
